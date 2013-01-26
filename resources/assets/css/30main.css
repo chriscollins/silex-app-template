@@ -1,0 +1,127 @@
+/* Main CSS. */
+
+/* Fonts. */
+
+@font-face {
+    font-family: '5x5_dotsregular';
+    src: url('../fonts/5x5dots-webfont.eot');
+    src: url('../fonts/5x5dots-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/5x5dots-webfont.woff') format('woff'),
+         url('../fonts/5x5dots-webfont.ttf') format('truetype'),
+         url('../fonts/5x5dots-webfont.svg#5x5_dotsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* End Fonts. */
+
+/* Main template and general styles. */
+
+body {
+
+}
+
+a {
+
+}
+
+a:hover {
+
+}
+
+h1 {
+    font-family: "5x5_dotsregular", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+
+}
+
+#container {
+    margin: 0 auto 10px auto;
+    width: 800px;
+}
+
+/* End Main template and general styles. */
+
+/* Main menu. */
+
+/* End Main menu. */
+
+/* Flash. */
+
+#flash {
+
+}
+
+#flash .flashInner {
+
+}
+
+#flash .flashInnerInfo,
+#flash .flashInnerSuccess {
+
+}
+
+#flash .flashInnerError {
+
+}
+
+/* End Flash. */
+
+/* Content. */
+
+#content {
+
+}
+
+#content p {
+    margin: 0px 0px 15px 0px;
+    clear: both;
+}
+
+/* Form. */
+
+#content fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#content .formRow {
+    margin-bottom: 20px;
+}
+
+#content .formRow label {
+    float: left;
+    display: block;
+    padding: 0 10px 0 0;
+    width: 80px;
+}
+
+#content .formRow label.required:after {
+    color: #f90;
+    content: " *";
+}
+
+#content .formErrors  {
+    color: #f00;
+}
+
+#content .formRow input {
+    margin-right: 5px;
+}
+
+/* End Form. */
+
+/* End Content. */
+
+/* Footer. */
+
+#footer {
+
+}
+
+/* End Footer. */
+
+/* End Main CSS. */

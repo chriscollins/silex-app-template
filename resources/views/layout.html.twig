@@ -1,0 +1,41 @@
+{% set navigation_bar = {'index': 'Home', 'contact': 'Contact'} %}
+{% set active_page = active_page|default('index') %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <title>{{ app.settings['site_name'] }} : {{ navigation_bar[active_page] }}</title>
+
+        <link rel="stylesheet" href="{{ app.request.basepath }}/assets/css/all.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <ul id="mainMenu">
+                {%- for identifier,text in navigation_bar -%}
+                    <li><a {% if active_page == identifier %}id="current" {% endif %}href="{{ path(identifier) }}">{{ text }}</a></li>
+                {%- endfor -%}
+            </ul>
+            {% set alertTypeAvaillable = [ 'info', 'success', 'error'] %}
+            {% for alertType in alertTypeAvaillable %}
+                {% if app.session.hasFlash(alertType) %}
+                        <div id="flash">
+                            <div class="flashInner flashInner{{ alertType|capitalize }}">
+                                {{ app.session.flash(alertType) }}
+                            </div>
+                        </div>
+                {% endif %}
+            {% endfor %}
+
+            {% block content %}{% endblock %}
+
+            <div id="footer">
+
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ app.request.basepath }}/assets/js/all.js"></script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+vendor/*
+cache/*
+application.log
+web/assets/css/*
+web/assets/js/*
